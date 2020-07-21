@@ -4,13 +4,25 @@
 @Test - Write a console.log that shows the result of 'toNumber('4')'
 */
 
+function toNumber(str) {
+    return parseInt(str)
+}
 
+console.log(toNumber('4'))
 
 /*
 @Challenge 02 - Write a function named 'priceTotal' that uses the .reduce() method to subtract numbers in an array.
 @Example - Sending [100, 50, 20] through the function should return 30.
 @Test - Make a function call of 'priceTotal()'
 */
+
+ function priceTotal(arr) {
+
+    const retVal = arr.reduce((acc, n) => acc - n)
+    return retVal
+
+} 
+console.log(priceTotal([100, 50, 20]))
 
 
 /*
@@ -19,6 +31,12 @@
 @Test - Make a function call of 'happyHour()'
 */
 
+function happyHour(arr) {
+    const legalDrinkers = arr.filter(drinker => drinker >= 21)
+    return legalDrinkers
+}
+
+console.log(happyHour([16, 17, 19, 20 ,22, 24, 25]))
 /*
 @Challenge 04 - Write a function called 'breakTheNest' that has a nested object like the one shown, your goal is to show only the firstName and everything within "car" in a sentence.
 @Example - Your terminal should return something along the lines of "John drives a 2019 Ford Explorer"
@@ -36,16 +54,31 @@ let person = {
 }
 */
 
+function breakTheNest(nestedObject) {
+    return nestedObject.name.firstName + ' drives a ' + nestedObject.car.year + ' ' + nestedObject.car.make + ' ' + nestedObject.car.model
+}
+
+console.log(breakTheNest)
+
 /*
 @Challenge 05 - Write a function called 'reverseErase' that takes an array of words, and takes a word and returns the new word without including the first character.
 @Example - ['Apple', 'Cinnamon', 'Acorn', 'Bread'] should return as: ['pple', 'innamon', 'corn', 'ead']
 @Test - Make a function call of 'reverseErase()'
 */
 
+function reverseErase(arr) {
+
+    return arr.map(word =>  { let wordArray = word.split('')
+    removedLetter = wordArray.shift()
+    return wordArray.join('')})
+}
+
+console.log(reverseErase(['Apple', 'Cinnamon', 'Acorn', 'Bread']))
+
 /*
 @Challenge 06 - Write a function called 'characterSelect' that has an array of characters and you are tasked with having two players select their character.
 @Example - you should get something like: Player one chose Mr Maximus, Player two chose Dr Doof.
-@Test Make a function call of 'characterSelect()'
+@Test Make a function call of 'characterSelect()' */
 let player = [{
     character: {
         name: 'Mr Maximus',
@@ -63,7 +96,16 @@ let player = [{
         }
     }
 ]
-*/
+
+
+function characterSelect(characterArray) {
+    let playerOneChoice = 'Player One chose ' + characterArray[Math.floor(Math.random() * 3)].name
+    let playerTwoChoice = 'Player Two chose ' + characterArray[Math.floor(Math.random() * 3)].name
+    return playerOneChoice
+    return playerTwoChoice
+}
+
+console.log(characterSelect(player))
 
 /*
 @Challenge 07 - Write a function called 'Mathmatical' where two numbers are passed as parameters. The first parameter divided by 
@@ -72,11 +114,23 @@ the second parameter will have a remainder, possibly zero. Return that value.
 @Test - Make a function call of 'Mathmatical()'
 */
 
+function mathmatical(x, y) {
+    return x / y
+}
+
+console.log(mathmatical(6, 3))
+
 /*
 @Challenge 08 - Write a function called 'theSwitcherroo' that can reverse an array.
 @Example - [1,2,3] would return as [3,2,1]
 @Test - Make a function call of 'theSwitcherroo()'
 */
+
+function theSwitcherroo(arr) {
+    return arr.reverse()
+}
+
+console.log(theSwitcherroo([1, 2, 3]))
 
 /*
 @Challenge 09 - Write a function called 'totalDestruction' that has an array of numbers and your goal is to removes any 
@@ -86,11 +140,23 @@ a message should appear in the terminal saying something like: "No odd numbers d
 @Test - Make a function call of 'totalDestruction()'
 */
 
+function totalDestruction(arr) {
+let retVal = arr.filter(number => number % 2 === 0)
+
+if (retVal.length === arr.length) {
+    return "No odd numbers detected"
+} else {
+    return retVal
+}
+}
+
+console.log(totalDestruction([20, 30, 40]))
+
 /* 
 @Challenge 10 - Write a function called 'heightRequirement' that checks the height of children who are trying to rida a Rollercoaster.
 In order to ride the child must be 7 years or older and be over 4ft tall.
 @Example - Using the given array show which children would be able to ride the rollercoaster.
-@Test - Make a function calle of 'heightRequirement()'.
+@Test - Make a function calle of 'heightRequirement()'.*/
 let children = [{
     age: 8,
     height: 4.1
@@ -104,4 +170,11 @@ let children = [{
     age: 7,
     height: 3.8
 }]
-*/
+
+
+function heightRequirement(children) {
+    let tallEnough = children.filter(child => child.age > 6 && child.height > 4)
+    return tallEnough
+}
+
+console.log(heightRequirement(children))
