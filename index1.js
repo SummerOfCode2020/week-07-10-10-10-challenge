@@ -111,7 +111,7 @@ console.log("And if you don't know, now you know.");
 
 // New Dog Age Formula
 // <href="https://www.sciencedaily.com/releases/2020/07/200702113649.htm#:~:text=The%20comparison%20revealed%20a%20new,puppies%20and%20babies%20develop%20teeth."</href>
-
+/*
 function dogHumanYears(year) {
   function() {
     humanAge = 16 * Math.ln * (dogAge) + 31
@@ -131,8 +131,68 @@ if (dogHumanYears < 17) {
 } else {
   console.log("Now you're an honored grand dog :D")
 };
+*/
 
+// Parrot Practice 
+/*
+function parrotTrouble(talking, hour) {
+  if (talking === true && hour > 20) {
+    return true;
+  }
+  else if (talking === true && hour < 7) {
+    return true;
+  }
+  else if (talking === false) {
+    return false;
+  }
+  else {
+    return false;
+  }
+};
+console.log(parrotTrouble(false, 6))
+*/
 
+// Variables that either are ten, or when added make ten.
+/*
+function makesTen(a, b) {
+  if (a === 10 || b === 10) {
+    return true;
+  } else if (a + b === 10) {
+    return true;
+  } else {
+    return false;
+  }
+};
+console.log(makesTen(5, 5))
+*/
 
+// Within ten of 100, or within ten of 200
+/*
+function nearHundred(n) {
+  if (Math.abs(100 - n) <= 10 || Math.abs(200 - n) <= 10) {
+    return true;
+  } else {
+    return false;
+  }
+};
+*/
+
+// Stuck on <href= "https://the-winter.github.io/codingjs/exercise.html?name=posNeg&title=Warmup-1" </href>
+
+/*
+function posNeg(a, b, negative) {
+ if (a < 0 || b < 0 && negative === true) {
+    return true;
+  } else if (a < 0 && b < 0 && negative === false) {
+    return false;
+  } else if (a < 0 || b < 0 && negative === true) {
+    return false;
+  } else if (a < 0 || b < 0 && negative === false) {
+    return true;
+  } else {
+    return false;
+  }
+};
+*/
 
 
