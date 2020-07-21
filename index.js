@@ -243,8 +243,7 @@ function totalDestruction(arrayNumbers) {
         })
 
         return onlyEvenValues
-    }
-    if (oddNumberCount === 0) {
+    } else {
 
         return 'No odd numbers detected'
     }
