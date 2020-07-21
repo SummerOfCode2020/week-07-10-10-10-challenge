@@ -195,4 +195,98 @@ function posNeg(a, b, negative) {
 };
 */
 
+// Practice with ITERATION
+
+/*
+const fruits = ['mango', 'papaya', 'pineapple', 'apple'];
+
+fruits.forEach(fruit => {
+  console.log('I want to eat a ' + fruit)
+});
+
+console.log(fruits)
+*/
+
+// Secret message from an array
+/*
+const animals = ['Hen', 'elephant', 'llama', 'leopard', 'ostrich', 'Whale', 'octopus', 'rabbit', 'lion', 'dog'];
+
+const secretMessage = animals.map(animal => {
+  return animal[0];
+});
+console.log(secretMessage.join(''));
+*/
+
+// Making big numbers in an array small
+/*
+const bigNumbers = [100, 200, 300, 400, 500];
+
+const smallNumbers = bigNumbers.map(number => {
+  return number / 100;
+});
+
+console.log(smallNumbers)
+console.log(bigNumbers)
+*/
+
+// Filter practice
+/*
+const favoriteWords = ['nostalgia', 'hyperbole', 'fervent', 'esoteric', 'serene'];
+
+const longFavoriteWords = favoriteWords.filter(word => {
+  return word.length > 7;
+});
+*/
+
+// .findIndex navigation
+/*
+const animals = ['hippo', 'tiger', 'lion', 'seal', 'cheetah', 'monkey', 'salamander', 'elephant'];
+
+const foundAnimal = animals.findIndex(animal => {
+  return animal === 'elephant';
+})
+
+console.log(foundAnimal);
+console.log(animals[7]);
+
+const startsWithS = animals.findIndex(animal => {
+  return animal[0] === 's';
+})
+
+console.log(animals);
+console.log(startsWithS);
+*/
+
+// Reduce practice
+/*
+const newNumbers = [1, 3, 5, 7];
+
+const newSum = newNumbers.reduce((accumulator, currentValue) => {
+
+  console.log('The value of accumulator: ', accumulator);
+  console.log('The value of currentValue: ', currentValue);
+  return accumulator + currentValue;
+
+}, 10);
+
+console.log(newSum)
+*/
+
+// .filter, .length, .some
+/*
+const words = ['unique', 'uncanny', 'pique', 'oxymoron', 'guise'];
+
+console.log(words.some((word) => {
+  return word.length < 6;
+}));
+
+const interestingWords = words.filter(word => {
+  return word.length > 5;
+})
+
+
+console.log(interestingWords.every((word) => {return word.length > 5} ));
+*/
+
+
 
