@@ -3,7 +3,14 @@
 @Example - Sending the function a value of '2' would return 2.
 @Test - Write a console.log that shows the result of 'toNumber('4')'
 */
+function toNumber (x) {
+    if (Number.isNaN(Number.parseFloat(x))) {
+        return 0
+    }
+    return parseFloat(x)
 
+}
+console.log(toNumber('4'))
 
 
 /*
@@ -11,23 +18,35 @@
 @Example - Sending [100, 50, 20] through the function should return 30.
 @Test - Make a function call of 'priceTotal()'
 */
+let arr = [100, 50, 20]
+function priceTotal(arr) {
+    return arr.reduce( (acc, currentValue) => acc - currentValue)
+}
 
-
+console.log(priceTotal(arr))
 /*
 @Challenge 03 - Write a function called 'happyHour' that has an array of numbers from 16 to 25 and filter out all the number from 21 and up.
 @Example - When sent through the function 21, 22, 23, 24 and 25 should be the only numbers returning.
 @Test - Make a function call of 'happyHour()'
 */
+let ages = [16, 17, 18, 19, 20, 21, 22, 23, 24, 25]
+function happyHour(num) {
+    if(num >= 21) {
+        return num
+    }
+}
+console.log(ages.filter(happyHour))
 
 /*
-@Challenge 04 - Write a function called 'breakTheNest' that has a nested object like the one shown, your goal is to show only the firstName and everything within "car" in a sentence.
+@Challenge 04 - Write a function called 'breakTheNest' that has a nested object like the one shown, 
+your goal is to show only the firstName and everything within "car" in a sentence.
 @Example - Your terminal should return something along the lines of "John drives a 2019 Ford Explorer"
 @Test - Make a function call of 'breakTheNest()'
 let person = {
     name: {
         firstName: 'John',
         lastName: 'Doe'
-    }
+    } 
     car: {
         make: 'Ford',
         model: 'Explorer'
@@ -35,7 +54,25 @@ let person = {
     }
 }
 */
+const person = [{
+    name: {
+        firstName: 'John',
+        lastName: 'Doe'
+    }
+    car: {
+        make: 'Ford',
+        model: 'Explorer',
+        year: 2019
+    }
+}]
 
+function breakTheNest(items, callback) {
+    for (let i =0; i < items.length; i++) {
+        const item = items[i]
+        
+        callback(item, i, items)
+    }
+}
 /*
 @Challenge 05 - Write a function called 'reverseErase' that takes an array of words, and takes a word and returns the new word without including the first character.
 @Example - ['Apple', 'Cinnamon', 'Acorn', 'Bread'] should return as: ['pple', 'innamon', 'corn', 'ead']
