@@ -120,9 +120,12 @@ console.log(Mathmatical(45, 2))
 @Example - [1,2,3] would return as [3,2,1]
 @Test - Make a function call of 'theSwitcherroo()'
 */
-let arr1 = ['person, woman, man, camera, tv'].reverse();
+function theSwitcherroo(arr) {
+    let newArr = arr.reverse()
+    return newArr
+}
+console.log(theSwitcherroo(['person', 'woman', 'man', 'camera', 'tv']))
 
-console.log(arr1)
 /*
 @Challenge 09 - Write a function called 'totalDestruction' that has an array of numbers and your goal is to removes any 
 odd numbers but lets you know if there are only even numbers it will return a message letting the user know.
