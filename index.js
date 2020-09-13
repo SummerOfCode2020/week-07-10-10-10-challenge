@@ -54,7 +54,7 @@ let person = {
     }
 }
 */
-/*
+
 function breakTheNest() {
     let person = {
         name: {
@@ -68,16 +68,30 @@ function breakTheNest() {
         }
         
     }
-    console.log( firstName + ' drives a ' + vehicle)
+    console.log( person.name.firstName + ' drives a ' + person.vehicle.year + " " + person.vehicle.make + " " + person.vehicle.model)
 }
 breakTheNest()
-/*
+
+
 /*
 @Challenge 05 - Write a function called 'reverseErase' that takes an array of words, 
 and takes a word and returns the new word without including the first character.
 @Example - ['Apple', 'Cinnamon', 'Acorn', 'Bread'] should return as: ['pple', 'innamon', 'corn', 'ead']
 @Test - Make a function call of 'reverseErase()'
 */
+
+let arr2 = ['Apple', 'Cinnamon', 'Acorn', 'Bread']
+
+// slice?
+function reverseErase() {
+    return arr2.map(food => food.substring(1)) 
+
+
+}
+reverseErase()
+console.log(reverseErase())
+
+
 
 /*
 @Challenge 06 - Write a function called 'characterSelect' that has an array of characters 
@@ -114,7 +128,7 @@ function Mathmatical(x, y) {
     return x / y;
 
 }
-console.log(Mathmatical(45, 2))
+console.log(Mathmatical(58, 2))
 /*
 @Challenge 08 - Write a function called 'theSwitcherroo' that can reverse an array.
 @Example - [1,2,3] would return as [3,2,1]
@@ -133,6 +147,13 @@ odd numbers but lets you know if there are only even numbers it will return a me
 a message should appear in the terminal saying something like: "No odd numbers detected"
 @Test - Make a function call of 'totalDestruction()'
 */
+/*function totalDestruction() {
+    let arr = [4,35,11,32,78,89,97,13,23,24,64,67];
+
+console.log(totalDestruction())*/
+
+
+
 
 /* 
 @Challenge 10 - Write a function called 'heightRequirement' that checks the height of children who are trying to rida a Rollercoaster.
